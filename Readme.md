@@ -61,8 +61,8 @@ Folder Structure:
 * JSON schemas which describe the payloads sent to the service
 
 These two files should be placed in below directories
-* [Environment config](https://github.com/vinaygupta2050/ApiTestAutomationFramework/tree/master/src/main/resources)
-* [JSON Schemas](https://github.com/vinaygupta2050/ApiTestAutomationFramework/tree/master/src/test/resources)
+* [Environment config](https://github.com/vinaygupta2050/iceyeApiTestFramework/tree/master/src/main/resources)
+* [JSON Schemas](https://github.com/vinaygupta2050/iceyeApiTestFramework/tree/master/src/test/resources)
 
 ### Target Environments
 The framework is designed so that multiple environments along with their required vairables can be supported and multiple services for each environment can be defined with in folder [Environment config](https://github.com/vinaygupta2050/ApiTestAutomationFramework/tree/master/src/main/resources) 
@@ -72,10 +72,10 @@ userName=admin
 password=password
 ```
 ### Target End Points
-List end points can be written in class [ApiEndPoints](https://github.com/vinaygupta2050/ApiTestAutomationFramework/blob/master/src/main/java/com/api/apiFactory/ApiEndPoints.java)  
+List end points can be written in class [ApiEndPoints](https://github.com/vinaygupta2050/iceyeApiTestFramework/blob/master/src/main/java/com/iceye/apiFactory/ApiEndPoints.java)  
 
 ### Headers
-Required Headers can be defined in HashMaps can de declared in class [ApiHeaders](https://github.com/vinaygupta2050/ApiTestAutomationFramework/blob/master/src/main/java/com/api/apiFactory/ApiHeaders.java)
+Required Headers can be defined in HashMaps can de declared in class [ApiHeaders](https://github.com/vinaygupta2050/iceyeApiTestFramework/blob/master/src/main/java/com/iceye/apiFactory/ApiHeaders.java)
 
 ### Payloads
 The framework is written in such a way that user needs to create a POJO class for the respective JSON reqruest or payload with which we wanted to hit the end points the POJO. The POJO class should be written in folder [pojo](https://github.com/vinaygupta2050/ApiTestAutomationFramework/tree/master/src/main/java/com/api/pojo).
@@ -86,7 +86,7 @@ The framework is capable of validating JSON schema against the response received
 ## Writing Test
 
 ### Feature
-As we have used cucumber we can write our test in Gherkin language which plain english language. Test can be written in feature file and it can be stored in [features] directory. Below is the sample api test written in gherkin language
+As we have used cucumber we can write our test in Gherkin language which plain english language. Test can be written in feature file and it can be stored in [features](https://github.com/vinaygupta2050/iceyeApiTestFramework/tree/master/src/test/java/com/iceye/test/features) directory. Below is the sample api test written in gherkin language
 ```
   Scenario: Get all close approach data for asteroid with valid query parameters
     Given I want to execute service "/cad.api"
@@ -103,30 +103,30 @@ As we have used cucumber we can write our test in Gherkin language which plain e
 
 ```
 ### Step definition
-We can write step definition with respect to the feature in [steps] directory.
+We can write step definition with respect to the feature in [steps](https://github.com/vinaygupta2050/iceyeApiTestFramework/tree/master/src/test/java/com/iceye/test/steps) directory.
 
 ## Running your Test
 When you are ready to run your tests from the command line, below are a few examples of run commands (standard maven command line syntax):
 
-* Right now we kept test environment as fixed. But in case if you want to pass test environment in maven command  you need to uncomment line number 16 in class [PropertyFileReader](https://github.com/vinaygupta2050/ApiTestAutomationFramework/blob/master/src/main/java/com/api/utils/PropertyFileReader.java) . User below command to run your test on local machine
+* Right now we kept test environment as fixed. But in case if you want to pass test environment in maven command  you need to uncomment line number 16 in class [PropertyFileReader](https://github.com/vinaygupta2050/iceyeApiTestFramework/blob/master/src/main/java/com/iceye/utils/PropertyFileReader.java) . User below command to run your test on local machine
 ```
 mvn clean verify -Denv=QA
 ```
 * To run test in docker container user below shell scripts to run.
 
-    1- While settingup project first time use below command.
+    1- While setting up project first time use below command to run [newSetupRunTest.sh](https://github.com/vinaygupta2050/iceyeApiTestFramework/blob/master/newSetupRunTest.sh).
        
        sh newSetupRunTest.sh
     Note: The above command will download container and all the required dependencies and than run the test execution in container.
     
-    2- Once the project is already setup you can use below command.
+    2- Once the project is already setup you can use below command to run [exitsingSetupRunTest.sh](https://github.com/vinaygupta2050/iceyeApiTestFramework/blob/master/exitsingSetupRunTest.sh).
        
        sh exitsingSetupRunTest.sh        
     Note: The above script will use your local cached maven dependencies and run your project. So you can eleminate download time whenever you will run your project.
     
 ## Test Results
 
-Once all the test are executed results can be generated in [target](https://github.com/vinaygupta2050/ApiTestAutomationFramework/tree/master/test-output/Report)
+Once all the test are executed results can be generated in [target](https://github.com/vinaygupta2050/iceyeApiTestFramework/tree/master/target/cucumber-report-html/cucumber-html-reports)
 
 ## Author
 
