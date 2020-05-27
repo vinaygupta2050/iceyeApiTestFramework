@@ -1,0 +1,423 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-27T07:43:36.229Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2308940900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeHook(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Get all close approach data for asteroid with valid query parameters",
+        "description": "",
+        "id": "sbdbcloseapproachdataapi;get-all-close-approach-data-for-asteroid-with-valid-query-parameters",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4938200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I want to execute service \"/cad.api\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/cad.api\"",
+                  "offset": 26
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_want_to_execute_service(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 73483300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I add query parameter key as \"des\" and value as \"433\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"des\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"433\"",
+                  "offset": 48
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_add_query_parameter_key_as_and_value_as(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2387100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I add query parameter key as \"date-min\" and value as \"1900-01-01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"date-min\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"1900-01-01\"",
+                  "offset": 53
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_add_query_parameter_key_as_and_value_as(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2604100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I add query parameter key as \"date-max\" and value as \"2100-01-01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"date-max\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"2100-01-01\"",
+                  "offset": 53
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_add_query_parameter_key_as_and_value_as(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2744200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I add query parameter key as \"dist-max\" and value as \"0.2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"dist-max\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"0.2\"",
+                  "offset": 53
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_add_query_parameter_key_as_and_value_as(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3183798400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I submit the GET request",
+            "match": {
+              "location": "SbdbCloseApproachDataApiSteps.i_submit_the_GET_request()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8503700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I validate that response status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_validate_that_response_status_code_is(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1286593100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I validate response with json schema \"cdaJsonSchema.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"cdaJsonSchema.json\"",
+                  "offset": 37
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_validate_response_with_json_schema(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1418226900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I validate that response contains total 5 records",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 40
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_validate_that_response_contains_total_records(Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42797600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I validate that response contains data with timestamp \"1931-Jan-30 04:07\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1931-Jan-30 04:07\"",
+                  "offset": 54
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_validate_that_response_contains_data_with_timestamp(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74542700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I validate that response data with timestamp \"1931-Jan-30 04:07\" is present at position 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1931-Jan-30 04:07\"",
+                  "offset": 45
+                },
+                {
+                  "val": "0",
+                  "offset": 88
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_validate_that_response_data_with_timestamp_is_present_at_position(String,Integer)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T07:43:44.686Z",
+        "before": [
+          {
+            "result": {
+              "duration": 8742900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeHook(Scenario)"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Get 400 status code with invalid query parameter while getting close approach data for asteroid",
+        "description": "",
+        "id": "sbdbcloseapproachdataapi;get-400-status-code-with-invalid-query-parameter-while-getting-close-approach-data-for-asteroid",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1496300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I want to execute service \"/cad.api\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/cad.api\"",
+                  "offset": 26
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_want_to_execute_service(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1724100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I add query parameter key as \"des\" and value as \"0\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"des\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"0\"",
+                  "offset": 48
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_add_query_parameter_key_as_and_value_as(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2309900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I add query parameter key as \"date-min\" and value as \"1900-01-01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"date-min\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"1900-01-01\"",
+                  "offset": 53
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_add_query_parameter_key_as_and_value_as(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2155800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I add query parameter key as \"date-max\" and value as \"2100-01-01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"date-max\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"2100-01-01\"",
+                  "offset": 53
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_add_query_parameter_key_as_and_value_as(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2372300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I add query parameter key as \"dist-max\" and value as \"0.2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"dist-max\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"0.2\"",
+                  "offset": 53
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_add_query_parameter_key_as_and_value_as(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1302660000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I submit the GET request",
+            "match": {
+              "location": "SbdbCloseApproachDataApiSteps.i_submit_the_GET_request()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2080100,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I validate that response status code is 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 40
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_validate_that_response_status_code_is(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 57094800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I validate that response contains message as \"specified object was not found\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"specified object was not found\"",
+                  "offset": 45
+                }
+              ],
+              "location": "SbdbCloseApproachDataApiSteps.i_validate_that_response_contains_message_as(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "SbdbCloseApproachDataApi",
+    "description": "  This feature deals with getting data for all asteroids and comets in JPL’s SBDB (Small-Body DataBase).",
+    "id": "sbdbcloseapproachdataapi",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/iceye/test/features/SbdbCloseApproachDataApi.feature",
+    "tags": []
+  }
+]

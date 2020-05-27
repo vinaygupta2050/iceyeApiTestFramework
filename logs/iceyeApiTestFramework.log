@@ -1,0 +1,20 @@
+2020-05-27 07:43:37 [main] INFO  Hooks:30 - Scenario name: Get all close approach data for asteroid with valid query parameters
+2020-05-27 07:43:37 [main] INFO  Hooks:24 - Setting base url : https://ssd-api.jpl.nasa.gov
+2020-05-27 07:43:38 [main] INFO  SbdbCloseApproachDataApiSteps:34 - Setting up End point as :/cad.api
+2020-05-27 07:43:38 [main] INFO  SbdbCloseApproachDataApiSteps:42 - Setting up Query Params as : (des,433)
+2020-05-27 07:43:38 [main] INFO  SbdbCloseApproachDataApiSteps:42 - Setting up Query Params as : (date-min,1900-01-01)
+2020-05-27 07:43:38 [main] INFO  SbdbCloseApproachDataApiSteps:42 - Setting up Query Params as : (date-max,2100-01-01)
+2020-05-27 07:43:38 [main] INFO  SbdbCloseApproachDataApiSteps:42 - Setting up Query Params as : (dist-max,0.2)
+2020-05-27 07:43:38 [main] INFO  SbdbCloseApproachDataApiSteps:50 - Sending GET Request to the server
+2020-05-27 07:43:41 [main] INFO  SbdbCloseApproachDataApiSteps:58 - Response status code is :200
+2020-05-27 07:43:44 [main] INFO  SbdbCloseApproachDataApiSteps:88 - Total records present in response is: 5
+2020-05-27 07:43:44 [main] INFO  Hooks:30 - Scenario name: Get 400 status code with invalid query parameter while getting close approach data for asteroid
+2020-05-27 07:43:44 [main] INFO  Hooks:24 - Setting base url : https://ssd-api.jpl.nasa.gov
+2020-05-27 07:43:44 [main] INFO  SbdbCloseApproachDataApiSteps:34 - Setting up End point as :/cad.api
+2020-05-27 07:43:44 [main] INFO  SbdbCloseApproachDataApiSteps:42 - Setting up Query Params as : (des,0)
+2020-05-27 07:43:44 [main] INFO  SbdbCloseApproachDataApiSteps:42 - Setting up Query Params as : (date-min,1900-01-01)
+2020-05-27 07:43:44 [main] INFO  SbdbCloseApproachDataApiSteps:42 - Setting up Query Params as : (date-max,2100-01-01)
+2020-05-27 07:43:44 [main] INFO  SbdbCloseApproachDataApiSteps:42 - Setting up Query Params as : (dist-max,0.2)
+2020-05-27 07:43:44 [main] INFO  SbdbCloseApproachDataApiSteps:50 - Sending GET Request to the server
+2020-05-27 07:43:45 [main] INFO  SbdbCloseApproachDataApiSteps:58 - Response status code is :400
+2020-05-27 07:43:46 [main] INFO  SbdbCloseApproachDataApiSteps:95 - Response contains message as :specified object was not found
